@@ -10,8 +10,14 @@ OBJECTS_DIR = $$RAYTRACER_OBJ_LIB
 CONFIG+= staticlib
 
 SOURCES += \
-    rendering/ray.cpp
+    rendering/ray.cpp \
+    rendering/primitive/iprimitive.cpp \
+    rendering/primitive/sphere.cpp \
+    math/types.cpp
 
 HEADERS  += \ 
     rendering/ray.hpp \
-    math/types.hpp
+    math/types.hpp \
+    rendering/types.hpp \
+    rendering/primitive/iprimitive.hpp \
+    rendering/primitive/sphere.hpp

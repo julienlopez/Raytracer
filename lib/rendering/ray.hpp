@@ -12,8 +12,13 @@ public:
 
     ~Ray() = default;
 
-    Math::Point3d origin;
-    Math::Vector3d direction;
+    const Math::Point3d& origin() const;
+
+    const Math::Vector3d& direction() const;
+
+private:
+    Math::Point3d m_origin;
+    Math::Vector3d m_direction;
 };
 
 } // Rendering
