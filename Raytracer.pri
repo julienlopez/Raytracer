@@ -21,8 +21,3 @@ RAYTRACER_LIB = $$RAYTRACER_ROOT/lib
 DESTDIR = $$RAYTRACER_BIN
 
 QCONFIG += c++14
-
-#QMAKE_CXXFLAGS += -std=c++11 --coverage -O0
-#LIBS += --coverage -O0
-
-#LIBS += $$RAYTRACER_BIN
