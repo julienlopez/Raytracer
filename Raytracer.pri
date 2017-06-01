@@ -20,7 +20,7 @@ RAYTRACER_LIB = $$RAYTRACER_ROOT/lib
 
 DESTDIR = $$RAYTRACER_BIN
 
-QCONFIG += c++14
+CONFIG += c++14
 
 include(boost.pri)
 include(eigen.pri)
