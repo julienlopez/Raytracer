@@ -21,3 +21,9 @@ RAYTRACER_LIB = $$RAYTRACER_ROOT/lib
 DESTDIR = $$RAYTRACER_BIN
 
 QCONFIG += c++14
+
+include(boost.pri)
+include(eigen.pri)
+include(gsl.pri)
+
+INCLUDEPATH += $$EIGEN_INCLUDE_PATH $$GSL_INCLUDE_PATH $$BOOST_INCLUDE_PATH
