@@ -9,7 +9,6 @@ OBJECTS_DIR = $$RAYTRACER_OBJ_LIB
 
 CONFIG+= staticlib
 
-SOURCES += \
-    tmp.cpp
+SOURCES += 
 
 HEADERS  += 
