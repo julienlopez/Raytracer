@@ -16,6 +16,8 @@ public:
 
     const Math::Vector3d& direction() const;
 
+    Math::Vector3d& direction();
+
 private:
     Math::Point3d m_origin;
     Math::Vector3d m_direction;

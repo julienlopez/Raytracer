@@ -19,4 +19,9 @@ const Math::Vector3d& Ray::direction() const
     return m_direction;
 }
 
+Math::Vector3d& Ray::direction()
+{
+    return m_direction;
+}
+
 } // Rendering

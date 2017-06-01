@@ -15,6 +15,10 @@ namespace Primitive
     public:
         virtual ~IPrimitive() = default;
 
+        IPrimitive(const IPrimitive&) = delete;
+
+        IPrimitive& operator=(const IPrimitive&) = delete;
+
         bool intersect(const Ray& ray, double& distance) const;
 
         void computeColorNormal(const Ray& ray, double distance, Color& color, Math::Vector3d& normal) const;
