@@ -84,8 +84,8 @@ Color RayTracer::computeColor(const Ray& ray) const
 
 void RayTracer::updateParameters()
 {
-    precompWidth = width / pixelWidth;
-    precompHeight = height / pixelHeight;
+    precompWidth = width / m_pixel_width;
+    precompHeight = height / m_pixel_height;
 }
 
 } // Rendering

@@ -18,14 +18,14 @@ namespace Primitive
     bool Sphere::impl_intersect(const Ray& ray, double& distance) const
     {
         const auto A = 1.;
-        const auto B = (ray.direction().transpose() * (ray.origin() - m_center));
+        const auto B = (ray.direction().transpose() * (ray.origin() - m_center))(0, 0);
         const auto C = Math::norm2(ray.origin() - m_center) - std::pow(m_radius, 2);
 
         const auto delta = (B * B - A * C);
 
         if(delta < 0.) return false;
         const auto disc = std::sqrt(delta);
-        if(distance = -(B + disc) < 0.) distance = -(B - disc);
+        if((distance = -(B + disc)) < 0.) distance = -(B - disc);
         return true;
     }
 
