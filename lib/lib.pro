@@ -13,11 +13,13 @@ SOURCES += \
     rendering/ray.cpp \
     rendering/primitive/iprimitive.cpp \
     rendering/primitive/sphere.cpp \
-    math/types.cpp
+    math/types.cpp \
+    rendering/scene.cpp
 
 HEADERS  += \ 
     rendering/ray.hpp \
     math/types.hpp \
     rendering/types.hpp \
     rendering/primitive/iprimitive.hpp \
-    rendering/primitive/sphere.hpp
+    rendering/primitive/sphere.hpp \
+    rendering/scene.hpp
