@@ -9,6 +9,9 @@ OBJECTS_DIR = $$RAYTRACER_OBJ_LIB
 
 CONFIG+= staticlib
 
-SOURCES += 
+SOURCES += \
+    rendering/ray.cpp
 
-HEADERS  += 
+HEADERS  += \ 
+    rendering/ray.hpp \
+    math/types.hpp
