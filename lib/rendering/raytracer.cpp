@@ -60,10 +60,8 @@ void RayTracer::setScene(Scene* scene)
 
 Ray RayTracer::generateRay(const std::size_t x, const std::size_t y) const
 {
-    Math::Vector3d dir = direction;
-    dir(0) = precompWidth * (x - m_pixel_width / 2.);
-    dir(1) = precompHeight * (y - m_pixel_height / 2.);
-    dir(2) = depth;
+    Math::Vector3d dir
+        = Math::createPoint(precompWidth * (x - m_pixel_width / 2.), precompHeight * (y - m_pixel_height / 2.), depth);
     return Ray(origin, Math::normalize(dir));
 }
 

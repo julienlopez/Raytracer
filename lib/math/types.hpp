@@ -12,4 +12,6 @@ double norm2(const Eigen::Vector3d& v);
 
 Eigen::Vector3d normalize(const Eigen::Vector3d& v);
 
+Eigen::Vector3d createPoint(const double x, const double y, const double z);
+
 } // Math
