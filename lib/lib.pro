@@ -1,6 +1,6 @@
 CONFIG -= QT
 
-include(../RayTracer.pri)
+include(../Raytracer.pri)
 
 TARGET = LibRayTracer
 TEMPLATE = lib

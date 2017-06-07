@@ -3,7 +3,7 @@ QT += core gui widgets
 TARGET = RayTracer
 TEMPLATE = app
 
-include(../RayTracer.pri)
+include(../Raytracer.pri)
 
 INCLUDEPATH += $$RAYTRACER_LIB
 
