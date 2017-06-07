@@ -7,7 +7,10 @@
 #include <memory>
 
 #include <QLabel>
+#include <QTime>
 #include <QVBoxLayout>
+
+#include <QDebug>
 
 namespace
 {
@@ -31,15 +34,18 @@ MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
 {
     Rendering::Scene scene;
-    scene.addPrimitive(std::make_unique<Rendering::Primitive::Sphere>(Math::createPoint(100, 100, 100), 50.,
-                                                                      Math::createPoint(1., 0., 0.)));
-    scene.addPrimitive(std::make_unique<Rendering::Primitive::Sphere>(Math::createPoint(0, 0, 50), 40.,
-                                                                      Math::createPoint(0., 1., 0.)));
-    scene.addPrimitive(std::make_unique<Rendering::Primitive::Sphere>(Math::createPoint(200, 0, 150), 40.,
-                                                                      Math::createPoint(0., 0., 1.)));
-    Rendering::RayTracer rt(1000, 1000, 100., 100., 10.);
+    scene.addPrimitive(
+        std::make_unique<Rendering::Primitive::Sphere>(Math::createPoint(0, 0, 80), 2, Math::createPoint(0, 0, 1)));
+    scene.addPrimitive(
+        std::make_unique<Rendering::Primitive::Sphere>(Math::createPoint(2, 1, 60), 1, Math::createPoint(1, 0, 0)));
+    scene.addPrimitive(
+        std::make_unique<Rendering::Primitive::Sphere>(Math::createPoint(-2, -1, 60), 1, Math::createPoint(0, 1, 0)));
+    Rendering::RayTracer rt(800, 600, 8., 6., 40.);
     rt.setScene(&scene);
+    const auto start = QTime::currentTime();
     const auto image = rt.draw();
+    const auto end = QTime::currentTime();
+    qDebug() << "rendered in " << start.msecsTo(end) << "ms";
 
     auto* l = new QLabel();
     l->setFixedSize(1000, 1000);
